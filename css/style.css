@@ -42,6 +42,65 @@ main
   min-height: calc(100vh - var(--site-header-height) - var(--site-footer-height));
 }
 
+.unity-main
+{
+  flex: 1;
+  min-height: 0;
+}
+
+.unity-container
+{
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: rgba(5, 10, 18, 0.9);
+}
+
+#unity-canvas
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.unity-loading
+{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-muted);
+  background: radial-gradient(500px 320px at 50% 40%, rgba(125, 211, 252, 0.08), transparent 60%),
+    rgba(5, 10, 18, 0.75);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.unity-loading.is-hidden
+{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.unity-warning
+{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: none;
+  z-index: 2;
+  font-size: 0.95rem;
+}
+
+.unity-warning div + div
+{
+  margin-top: 0.5rem;
+}
+
 /* Links */
 a
 {

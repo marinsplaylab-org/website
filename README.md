@@ -11,20 +11,45 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Project Structure
 ```
 .
+├── .gitignore
 ├── .htaccess
 ├── 404.html
+├── LICENSE
+├── README.md
 ├── about.html
 ├── index.html
+├── project-solar-system/
+│   ├── Build/
+│   │   ├── Solar-System.data.br
+│   │   ├── Solar-System.framework.js.br
+│   │   ├── Solar-System.loader.js
+│   │   └── Solar-System.wasm.br
+│   ├── TemplateData/
+│   │   ├── MemoryProfiler.png
+│   │   ├── favicon.ico
+│   │   ├── fullscreen-button.png
+│   │   ├── progress-bar-empty-dark.png
+│   │   ├── progress-bar-empty-light.png
+│   │   ├── progress-bar-full-dark.png
+│   │   ├── progress-bar-full-light.png
+│   │   ├── style.css
+│   │   ├── unity-logo-dark.png
+│   │   ├── unity-logo-light.png
+│   │   ├── unity-logo-title-footer.png
+│   │   └── webmemd-icon.png
+│   └── index.html
 ├── templates/
 │   ├── header.html
 │   └── footer.html
 ├── css/
 │   └── style.css
 ├── js/
-│   └── include.js
+│   ├── include.js
+│   └── unity-loader.js
 └── images/
     ├── favicon.jpg
     ├── gallery/
+    │   └── solar-system.jpg
     ├── logo.jpg
     └── socials/
         ├── bluesky.svg
@@ -50,10 +75,23 @@ python3 -m http.server
 Press `Ctrl + C` in the Terminal where the server is running.
 
 ## Notes
-- Do not open `index.html` directly using `file://`  
-- A local server is required for header/footer loading (they are fetched from `templates/`)  
+- Do not open `index.html` directly using `file://`
+- A local server is required for header/footer loading (they are fetched from `templates/`)
 - The website is mobile-friendly and built with responsive design in mind
 - Code style: CSS/JS use brace-on-new-line formatting
+
+## Unity WebGL Template
+Use a folder-based page so the route can be extensionless:
+
+1. Create a folder like `project-your-build/`.
+2. Add an `index.html` that follows your project template (for example, `project-your-build/index.html`).
+3. Include `../js/unity-loader.js` and call `loadUnity("unity-root")`.
+4. Copy Unity build output into the same folder:
+   - `Build/`
+   - `TemplateData/` (and `StreamingAssets/` if present)
+5. Ensure file names in `index.html` match that project's Unity output (for example: `Build/YourProjectName.*`).
+6. If Unity outputs Brotli files (`.br`), keep the Brotli header block enabled in `.htaccess`.
+7. Link to it using `/project-your-build` (no `.html`).
 
 ## Open Source and Transparency
 The website and its projects are published openly on https://github.com/marinsplaylab-org/ so people can learn from them, reuse them, and improve them. The site is early stage, so updates will arrive gradually.
@@ -62,9 +100,9 @@ The website and its projects are published openly on https://github.com/marinspl
 No ads. No aggressive tracking. Only essential services are used to run the site and projects. If a third party service is involved, their policies apply and they handle their own data.
 
 ## Tech Used
-- HTML  
-- CSS  
-- Bootstrap 5  
+- HTML
+- CSS
+- Bootstrap 5
 - JavaScript
 
 ## Contributing / Feedback
@@ -77,7 +115,7 @@ You can help with:
 Code PRs may be closed without review. If you want to propose a code change, please open an issue first.
 
 ## Future Plans
-- Add more interactive educational projects  
-- Expand research resources  
-- Improve user interface and accessibility  
+- Add more interactive educational projects
+- Expand research resources
+- Improve user interface and accessibility
 - Continuously update with new content and features

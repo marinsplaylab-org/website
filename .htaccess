@@ -7,3 +7,23 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L]
+
+# Unity WebGL Brotli (.br) support
+<IfModule mod_headers.c>
+  <FilesMatch "\.js\.br$">
+    Header set Content-Encoding br
+    Header set Content-Type "application/javascript; charset=UTF-8"
+  </FilesMatch>
+  <FilesMatch "\.data\.br$">
+    Header set Content-Encoding br
+    Header set Content-Type "application/octet-stream"
+  </FilesMatch>
+  <FilesMatch "\.wasm\.br$">
+    Header set Content-Encoding br
+    Header set Content-Type "application/wasm"
+  </FilesMatch>
+  <FilesMatch "\.framework\.js\.br$">
+    Header set Content-Encoding br
+    Header set Content-Type "application/javascript; charset=UTF-8"
+  </FilesMatch>
+</IfModule>

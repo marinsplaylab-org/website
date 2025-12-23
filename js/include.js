@@ -38,8 +38,8 @@ function updateLayoutVars()
 
 // Load header/footer templates and update layout sizing once they are in place
 Promise.all([
-  loadHTML("header", "templates/header.html"),
-  loadHTML("footer", "templates/footer.html")
+  loadHTML("header", "/templates/header.html"),
+  loadHTML("footer", "/templates/footer.html")
 ]).then(updateLayoutVars);
 
 window.addEventListener("resize", updateLayoutVars);
