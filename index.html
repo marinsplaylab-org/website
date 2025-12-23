@@ -7,7 +7,7 @@
   <!-- Makes the site responsive on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Marins PlayLab | Official Website</title>
+  <title>Marins PlayLab | Exploring STEM and beyond through interactive open projects, visuals, experiments, and discoveries.</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
@@ -25,14 +25,44 @@
   <div id="header"></div>
 
   <!-- Main page content -->
-  <main class="container my-5">
-    <section class="text-center">
-      <h1>Website is under construction!</h1>
+  <main class="container-fluid site-main">
+    <section class="gallery-section">
+      <div class="gallery-grid">
 
-      <!-- Short intro text -->
-      <p class="lead mt-3">
-        Come back soon.
-      </p>
+        <a class="gallery-item" href="project-solar-system.html" aria-label="Solar System">
+          <img
+            class="gallery-media is-static"
+            src="images/gallery/solar-system.jpg"
+            alt="Solar System still frame"
+            loading="lazy"
+            decoding="async">
+          <img
+            class="gallery-media is-motion"
+            src="images/gallery/solar-system-anim.gif"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async">
+          <div class="gallery-overlay">
+            <h2 class="gallery-title">Solar System</h2>
+            <p class="gallery-desc">Upcoming project, planned for January 2026.</p>
+          </div>
+        </a>
+
+        <div class="gallery-item is-upcoming" role="status" aria-label="Upcoming project">
+          <div class="gallery-overlay">
+            <h2 class="gallery-title">Upcoming Project</h2>
+            <p class="gallery-desc">Interactive experiments and visuals are in progress.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item is-upcoming" role="status" aria-label="Upcoming project">
+          <div class="gallery-overlay">
+            <h2 class="gallery-title">Upcoming Project</h2>
+            <p class="gallery-desc">More hands-on science content is on the way.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
