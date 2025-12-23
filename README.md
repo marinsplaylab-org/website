@@ -1,4 +1,4 @@
-# Marins PlayLab — Official Website
+# Marins PlayLab - Official Website
 Marins PlayLab is an independent space for exploring STEM and more through interactive, open projects, visuals, experiments, and discoveries.
 This is a curiosity driven passion project in a very early phase, with a simple goal: make learning feel simple, clear, and fun. The focus is on short educational posts, science news, visual explanations, and small projects you can try yourself, such as simulations that let you explore ideas instead of only reading about them.
 Contributions are welcome, especially from people with deeper knowledge in specific topics.
