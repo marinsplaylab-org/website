@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "type": "project",
+      "title": "Solar System",
+      "description": "Upcoming project, planned for January 2026.",
+      "link": "/project-solar-system/",
+      "imageStatic": "/images/gallery/solar-system.jpg",
+      "imageMotion": "/images/gallery/solar-system-anim.gif",
+      "sourceUrl": "https://github.com/marinsplaylab-org/solar-system",
+      "sourceText": "https://github.com/marinsplaylab-org/solar-system",
+      "ariaLabel": "Solar System"
+    },
+    {
+      "type": "upcoming",
+      "title": "Upcoming Project",
+      "description": "Interactive experiments and visuals are in progress.",
+      "ariaLabel": "Upcoming project"
+    },
+    {
+      "type": "upcoming",
+      "title": "Upcoming Project",
+      "description": "More hands-on science content is on the way.",
+      "ariaLabel": "Upcoming project"
+    }
+  ]
+}

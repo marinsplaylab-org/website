@@ -3,6 +3,12 @@ async function loadHTML(_elementId, _filePath)
 {
   try
   {
+    const element = document.getElementById(_elementId);
+    if (!element)
+    {
+      return null;
+    }
+
     const response = await fetch(_filePath);
     if (!response.ok)
     {
@@ -11,17 +17,13 @@ async function loadHTML(_elementId, _filePath)
 
     const data = await response.text();
 
-    const element = document.getElementById(_elementId);
-    if (!element)
-    {
-      throw new Error(`Missing element with id="${_elementId}"`);
-    }
-
     element.innerHTML = data;
+    return element;
   }
   catch (error)
   {
     console.error(error);
+    return null;
   }
 }
 
