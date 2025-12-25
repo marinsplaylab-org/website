@@ -13,7 +13,10 @@ This project is licensed under the MIT License. See the LICENSE file for details
 .
 ├── .gitignore
 ├── .htaccess
+├── 403.html
 ├── 404.html
+├── 500.html
+├── 503.html
 ├── LICENSE
 ├── README.md
 ├── about.html
@@ -32,6 +35,8 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ├── templates/
 │   ├── header.html
 │   └── footer.html
+├── robots.txt
+├── sitemap.xml
 ├── css/
 │   └── style.css
 ├── js/
