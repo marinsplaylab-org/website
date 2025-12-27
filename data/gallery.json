@@ -3,12 +3,10 @@
     {
       "type": "project",
       "title": "Solar System",
-      "description": "Upcoming project, planned for January 2026.",
+      "description": "Upcoming project, planned for January 2026. Preview prototype used for testing.",
       "link": "/project-solar-system/",
       "imageStatic": "/images/gallery/solar-system.jpg",
       "imageMotion": "/images/gallery/solar-system-anim.gif",
-      "sourceUrl": "https://github.com/marinsplaylab-org/solar-system",
-      "sourceText": "https://github.com/marinsplaylab-org/solar-system",
       "ariaLabel": "Solar System"
     },
     {
